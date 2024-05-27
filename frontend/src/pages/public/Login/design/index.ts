@@ -15,6 +15,10 @@ export const Left = styled.div`
   @media (prefers-color-scheme: dark) {
     background-color: #101114;
   }
+
+  @media (max-width: 900px) {
+    display: none !important;
+  }
 `
 
 export const Right = styled.div`
@@ -22,5 +26,9 @@ export const Right = styled.div`
 
   @media (prefers-color-scheme: dark) {
     background-color: #0e1012;
+  }
+
+  @media (max-width: 900px) {
+    width: 90%;
   }
 `

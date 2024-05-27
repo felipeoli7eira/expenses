@@ -18,7 +18,7 @@ function LoginPage(): JSX.Element {
 
   return (
     <Container className='flex justify-content-center align-items-center h-screen'>
-      <GridLogin className='grid grid-nogutter'>
+      <GridLogin className='grid justify-content-center grid-nogutter'>
         <Left className='col col-6 border-round-left-lg p-6 flex justify-content-center align-items-center'>
           <Image
             src={ImageSrcLogin}
@@ -26,7 +26,7 @@ function LoginPage(): JSX.Element {
           />
         </Left>
 
-        <Right className='col col-6 border-round-right-lg p-6 flex align-items-center justify-content-center'>
+        <Right className='col col-8 md:col-6 border-round-right-lg p-6 flex align-items-center justify-content-center'>
           <form className='w-full'>
             <header className='mb-4'>
               <p className='m-0'>Bem-vindo de volta</p>
