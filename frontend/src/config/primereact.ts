@@ -1,16 +1,6 @@
 // https://github.com/primefaces/primelocale
 
-import '/node_modules/primeflex/primeflex.css'
-import 'primereact/resources/themes/vela-green/theme.css'
-
-import {
-  locale,
-  addLocale,
-  updateLocaleOption,
-  updateLocaleOptions,
-  localeOption,
-  localeOptions,
-} from 'primereact/api'
+import { addLocale } from 'primereact/api'
 
 addLocale('pt-BR', {
   dayNames: ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'],

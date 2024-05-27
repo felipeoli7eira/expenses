@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --body-dark: #141518;
+    --body-light: #f9fafb;
+}
+
+* {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+body {
+    background-color: var(--body-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--body-dark);
+  }
+}
