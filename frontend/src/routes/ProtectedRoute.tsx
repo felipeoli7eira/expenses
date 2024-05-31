@@ -1,10 +1,12 @@
 import { useContext } from 'react'
 import { AuthContext } from '../contexts/AuthContext'
 import { Navigate, Outlet } from 'react-router-dom'
-import DefaultTemplate from '../templates/default'
+import DefaultTemplate from '../layout/default'
 
 export default function Protected() {
-  const { isSignedIn } = useContext(AuthContext)
+  //   const { isSignedIn } = useContext(AuthContext)
+
+  const isSignedIn = true
 
   return isSignedIn ? (
     <DefaultTemplate>

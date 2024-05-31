@@ -20,7 +20,7 @@ export const theme: DefaultTheme = {
     cyan: '#3BC9DB',
     blue: '#25BEFF',
     indigo: '#4263Eb',
-    purple: '#7E5CEF',
+    purple: '#551a8b',
     pink: '#FE5895',
     gray100: '#FAFAFA',
     gray200: '#E9ECEF',

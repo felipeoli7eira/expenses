@@ -73,9 +73,13 @@ function LoginPage(): JSX.Element {
               </NavLink>
             </div>
 
-            <Button label='Acessar' severity='success' className='w-full mb-2' />
+            <Button type='button' label='Acessar' severity='success' className='w-full mb-2' onClick={() => {
+                console.log('login...')
+            }} />
 
-            <Button label='Faça login com o Google' className='w-full' />
+            <Button label='Faça login com o Google' className='w-full' onClick={() => {
+                console.log('google auth service')
+            }} />
 
             <p className='m-0 mt-5 text-center'>
               Não tem uma conta?{' '}
