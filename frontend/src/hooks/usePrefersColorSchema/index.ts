@@ -23,24 +23,24 @@ export default function usePrefersColorSchema() {
 
   const [prefColorSchema, setPrefColorSchema] = useState<ColorSchemas>('light')
 
-  function checkLocalStorage(): void {
-    const storagePrefersColorSchema = localStorage.getItem('prefers-color-schema')
-    console.log(storagePrefersColorSchema)
-  }
+  //   function checkLocalStorage(): void {
+  //     const storagePrefersColorSchema = localStorage.getItem('prefers-color-schema')
+  //     console.log(storagePrefersColorSchema)
+  //   }
 
-  function getUserSystemPrefersColorSchema(): void {
-    const isDarkModePrefColorSchema: MediaQueryList = window.matchMedia(
-      '(prefers-color-scheme: dark)',
-    )
+  //   function getUserSystemPrefersColorSchema(): void {
+  //     const isDarkModePrefColorSchema: MediaQueryList = window.matchMedia(
+  //       '(prefers-color-scheme: dark)',
+  //     )
 
-    if (isDarkModePrefColorSchema) {
-      console.log('prefer dark mode')
-    }
+  //     if (isDarkModePrefColorSchema) {
+  //       console.log('prefer dark mode')
+  //     }
 
-    if (!isDarkModePrefColorSchema) {
-      console.log('prefer light mode')
-    }
-  }
+  //     if (!isDarkModePrefColorSchema) {
+  //       console.log('prefer light mode')
+  //     }
+  //   }
 
   function init() {
     const isDarkModePrefColorSchema: MediaQueryList = window.matchMedia(

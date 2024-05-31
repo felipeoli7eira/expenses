@@ -1,5 +1,3 @@
-import { useContext } from 'react'
-import { AuthContext } from '../contexts/AuthContext'
 import { Navigate, Outlet } from 'react-router-dom'
 import DefaultTemplate from '../layout/default'
 
