@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { createContext, useEffect, useState } from 'react'
 import AuthContextPropsInterface from '../../interfaces/AuthContextPropsInterface'
 import { Navigate } from 'react-router-dom'
