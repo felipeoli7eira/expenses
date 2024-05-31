@@ -18,41 +18,10 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "react-hooks",
-    "@typescript-eslint",
-    "prettier",
-    "eslint-plugin-import-helpers"
-  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-    "no-duplicate-imports": "error",
-    "no-unused-vars": "error",
-    "import-helpers/order-imports": [
-      "warn",
-      {
-        "newlinesBetween": "always", // insere uma linha em branco após cada grupo de prioridade
-        "groups": [
-          ["/^react/", "/^redux/"], // primeiro grupo: tudo que inicia com 'react' e 'redux'
-          "/styled-components/", // segundo grupo: tudo o que for importado diretamente da biblioteca styled-components. Isso é para garantir que a primeira importação nos arquivos styles.js seja sempre a do styled-components.
-          "module", // terceiro grupo: tudo que é um módulo (qualquer biblioteca listada no arquivo package.json)
-          "/prop-types/", // quarto grupo: a importação do prop-types
-          "/^~/pages/", // quinto grupo: todas as minhas páginas
-          "/^~/components/", // sexto grupo: todas os meus componentes
-          ["parent", "sibling", "index"], // sétimo grupo: qualquer arquivo pai, irmão ou filho do arquivo atual
-          "/routes/", // oitavo grupo: as minhas rotas
-          "/^~/", // nono grupo: todos os outros arquivos importados pelo alias configurado
-          "/styles/", // penúltimo grupo: os meus estilos
-          "/^~/types/" // último grupo: as minhas interfaces
-        ],
-        "alphabetize": {
-          "order": "asc",
-          "ignoreCase": true
-        } // configura as importações por ordem alfabética (crescente), ignorando maiúsculas e minúsculas
-      }
-    ]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
   },
   "settings": {
     "import/resolver": {
