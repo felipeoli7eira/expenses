@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, NavLink } from 'react-router-dom'
 import AuthProvider from '../contexts/AuthContext'
 import Protected from './ProtectedRoute'
 
@@ -22,7 +22,11 @@ export function AppRoutes(): JSX.Element {
           path=''
           element={
             <div className='p-4 text-center'>
-              <p>redirecione...</p>
+              <p className='text-white'>redirecione...</p>
+              <nav className='flex gap-5 justify-content-center text-xl'>
+                <NavLink to='/login'>login</NavLink>
+                <NavLink to='/app'>app</NavLink>
+              </nav>
             </div>
           }
         />

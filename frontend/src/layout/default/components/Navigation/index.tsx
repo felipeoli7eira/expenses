@@ -11,8 +11,9 @@ import { Aside, LogOutButton } from './../../design'
 import { NavLink } from 'react-router-dom'
 
 import { Tooltip } from 'primereact/tooltip'
+import { NavigationProps } from '../../../../interfaces/DefaultTemplateProps'
 
-export default function Navigation(): JSX.Element {
+export default function Navigation({ navigationIsOpen }: NavigationProps): JSX.Element {
   const { prefColorSchema } = usePrefersColorSchema()
 
   const menuIconSize = 25
@@ -21,12 +22,12 @@ export default function Navigation(): JSX.Element {
   return (
     <Aside
       className={clsx(
-        'h-full p-3 flex flex-column justify-content-between align-items-center',
+        'h-full p-3 absolute flex flex-column justify-content-between align-items-center',
         prefColorSchema === 'light' ? 'bg-white-alpha-90' : 'bg-black-alpha-10',
       )}
-      isopen={true}
+      navigationIsOpen={navigationIsOpen}
     >
-      <header>
+      <header className='w-full'>
         <nav className='w-full flex flex-column align-items-center gap-2'>
           <NavLink
             to={''}
