@@ -8,6 +8,8 @@ import { Button } from 'primereact/button'
 import ImageSrcLogin from '../../../../images/svg/login-illustration.svg'
 
 import { Container, Image, GridLogin, Left, Right } from './../design'
+import usePrefersColorSchema from '../../../../hooks/usePrefersColorSchema'
+import { clsx } from 'clsx'
 
 function LoginPage(): JSX.Element {
   const { isSignedIn } = useContext(AuthContext)
@@ -15,6 +17,8 @@ function LoginPage(): JSX.Element {
   if (isSignedIn) {
     return <Navigate to={'/app'} />
   }
+
+  const { prefColorSchema } = usePrefersColorSchema()
 
   return (
     <Container className='flex justify-content-center align-items-center h-screen'>
@@ -28,7 +32,11 @@ function LoginPage(): JSX.Element {
 
         <Right className='col col-8 md:col-6 border-round-right-lg p-6 flex align-items-center justify-content-center'>
           <form className='w-full'>
-            <header className='mb-4'>
+            <header className={clsx(
+                'mb-4',
+                prefColorSchema === 'light' && 'text-black',
+                prefColorSchema === 'dark' && 'text-white'
+            )}>
               <p className='m-0'>Bem-vindo de volta</p>
               <h1 className='m-0 font-normal text-xl my-3'>Faça login na sua conta</h1>
             </header>
@@ -81,7 +89,11 @@ function LoginPage(): JSX.Element {
                 console.log('google auth service')
             }} />
 
-            <p className='m-0 mt-5 text-center'>
+            <p className={clsx(
+                'm-0 mt-5 text-center',
+                prefColorSchema === 'light' && 'text-black',
+                prefColorSchema === 'dark' && 'text-white'
+            )}>
               Não tem uma conta?{' '}
               <NavLink className='text-green-500 no-underline' to={'register'}>
                 Cadastre-se
