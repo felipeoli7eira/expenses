@@ -20,7 +20,7 @@ export default function DefaultTemplate({ children }: DefaultTemplateProps) {
       >
         <header className='p-3 bg-black-alpha-20 shadow-1'>
           <ButtonChangeMenuState className='flex bg-none cursor-pointer' type='button' onClick={handleNavigationState}>
-            <IoMenuOutline size={22} color='white' />
+            <IoMenuOutline size={25} color='white' />
           </ButtonChangeMenuState>
         </header>
         {children}
